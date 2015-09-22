@@ -1,0 +1,7 @@
+{
+	"armor_leather": {
+		"name": "Leather Armor",
+		"defense": 1,
+		"description": "Armor made from tanned animal hide. It smells a bit funny, but it'd do the job."
+	}
+}
