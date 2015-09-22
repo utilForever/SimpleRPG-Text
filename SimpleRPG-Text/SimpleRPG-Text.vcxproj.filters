@@ -1,36 +1,97 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <ClCompile Include="JsonBox\Convert.cpp">
+      <Filter>JsonBox</Filter>
+    </ClCompile>
+    <ClCompile Include="JsonBox\Escaper.cpp">
+      <Filter>JsonBox</Filter>
+    </ClCompile>
+    <ClCompile Include="JsonBox\IndentCanceller.cpp">
+      <Filter>JsonBox</Filter>
+    </ClCompile>
+    <ClCompile Include="JsonBox\Indenter.cpp">
+      <Filter>JsonBox</Filter>
+    </ClCompile>
+    <ClCompile Include="JsonBox\JsonParsingError.cpp">
+      <Filter>JsonBox</Filter>
+    </ClCompile>
+    <ClCompile Include="JsonBox\JsonWritingError.cpp">
+      <Filter>JsonBox</Filter>
+    </ClCompile>
+    <ClCompile Include="JsonBox\SolidusEscaper.cpp">
+      <Filter>JsonBox</Filter>
+    </ClCompile>
+    <ClCompile Include="JsonBox\Value.cpp">
+      <Filter>JsonBox</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="JsonBox\Array.h">
+      <Filter>JsonBox</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonBox\Convert.h">
+      <Filter>JsonBox</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonBox\Escaper.h">
+      <Filter>JsonBox</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonBox\Export.h">
+      <Filter>JsonBox</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonBox\Grammar.h">
+      <Filter>JsonBox</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonBox\IndentCanceller.h">
+      <Filter>JsonBox</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonBox\Indenter.h">
+      <Filter>JsonBox</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonBox\JsonParsingError.h">
+      <Filter>JsonBox</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonBox\JsonWritingError.h">
+      <Filter>JsonBox</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonBox\OutputFilter.h">
+      <Filter>JsonBox</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonBox\SolidusEscaper.h">
+      <Filter>JsonBox</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonBox\Value.h">
+      <Filter>JsonBox</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonBox.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="JsonBox">
+      <UniqueIdentifier>{9b299f5a-f315-442a-8ebf-3a48ec290290}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="JsonData">
+      <UniqueIdentifier>{9d370f46-f2e7-4559-88f7-bbce8bbb099c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Dialogue.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Creature.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Dialogue.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Creature.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <None Include="JsonData\doors.json">
+      <Filter>JsonData</Filter>
+    </None>
+    <None Include="JsonData\items.json">
+      <Filter>JsonData</Filter>
+    </None>
+    <None Include="JsonData\weapons.json">
+      <Filter>JsonData</Filter>
+    </None>
+    <None Include="JsonData\areas.json">
+      <Filter>JsonData</Filter>
+    </None>
+    <None Include="JsonData\armor.json">
+      <Filter>JsonData</Filter>
+    </None>
+    <None Include="JsonData\creatures.json">
+      <Filter>JsonData</Filter>
+    </None>
   </ItemGroup>
 </Project>

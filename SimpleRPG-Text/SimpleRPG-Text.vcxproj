@@ -18,6 +18,40 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="JsonBox\Convert.cpp" />
+    <ClCompile Include="JsonBox\Escaper.cpp" />
+    <ClCompile Include="JsonBox\IndentCanceller.cpp" />
+    <ClCompile Include="JsonBox\Indenter.cpp" />
+    <ClCompile Include="JsonBox\JsonParsingError.cpp" />
+    <ClCompile Include="JsonBox\JsonWritingError.cpp" />
+    <ClCompile Include="JsonBox\SolidusEscaper.cpp" />
+    <ClCompile Include="JsonBox\Value.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="JsonBox.h" />
+    <ClInclude Include="JsonBox\Array.h" />
+    <ClInclude Include="JsonBox\Convert.h" />
+    <ClInclude Include="JsonBox\Escaper.h" />
+    <ClInclude Include="JsonBox\Export.h" />
+    <ClInclude Include="JsonBox\Grammar.h" />
+    <ClInclude Include="JsonBox\IndentCanceller.h" />
+    <ClInclude Include="JsonBox\Indenter.h" />
+    <ClInclude Include="JsonBox\JsonParsingError.h" />
+    <ClInclude Include="JsonBox\JsonWritingError.h" />
+    <ClInclude Include="JsonBox\OutputFilter.h" />
+    <ClInclude Include="JsonBox\SolidusEscaper.h" />
+    <ClInclude Include="JsonBox\Value.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JsonData\areas.json" />
+    <None Include="JsonData\armor.json" />
+    <None Include="JsonData\creatures.json" />
+    <None Include="JsonData\doors.json" />
+    <None Include="JsonData\items.json" />
+    <None Include="JsonData\weapons.json" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{1B7E2DB7-5615-4AF8-8BD4-FC991463E5CE}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -145,15 +179,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Creature.cpp" />
-    <ClCompile Include="Dialogue.cpp" />
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Creature.h" />
-    <ClInclude Include="Dialogue.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
