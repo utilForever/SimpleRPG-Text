@@ -19,6 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Armor.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="EntityManager.cpp" />
+    <ClCompile Include="Item.cpp" />
     <ClCompile Include="JsonBox\Convert.cpp" />
     <ClCompile Include="JsonBox\Escaper.cpp" />
     <ClCompile Include="JsonBox\IndentCanceller.cpp" />
@@ -28,8 +32,13 @@
     <ClCompile Include="JsonBox\SolidusEscaper.cpp" />
     <ClCompile Include="JsonBox\Value.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Armor.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="EntityManager.h" />
+    <ClInclude Include="Item.h" />
     <ClInclude Include="JsonBox.h" />
     <ClInclude Include="JsonBox\Array.h" />
     <ClInclude Include="JsonBox\Convert.h" />
@@ -43,14 +52,15 @@
     <ClInclude Include="JsonBox\OutputFilter.h" />
     <ClInclude Include="JsonBox\SolidusEscaper.h" />
     <ClInclude Include="JsonBox\Value.h" />
+    <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="JsonData\areas.json" />
-    <None Include="JsonData\armor.json" />
-    <None Include="JsonData\creatures.json" />
-    <None Include="JsonData\doors.json" />
-    <None Include="JsonData\items.json" />
-    <None Include="JsonData\weapons.json" />
+    <None Include="areas.json" />
+    <None Include="armor.json" />
+    <None Include="creatures.json" />
+    <None Include="doors.json" />
+    <None Include="items.json" />
+    <None Include="weapons.json" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{1B7E2DB7-5615-4AF8-8BD4-FC991463E5CE}</ProjectGuid>
@@ -123,11 +133,15 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
