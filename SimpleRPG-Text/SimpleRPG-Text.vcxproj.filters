@@ -31,6 +31,8 @@
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Armor.cpp" />
     <ClCompile Include="Weapon.cpp" />
+    <ClCompile Include="Inventory.cpp" />
+    <ClCompile Include="Dialogue.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="JsonBox\Array.h">
@@ -75,6 +77,8 @@
     <ClInclude Include="Item.h" />
     <ClInclude Include="Armor.h" />
     <ClInclude Include="Weapon.h" />
+    <ClInclude Include="Inventory.h" />
+    <ClInclude Include="Dialogue.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="JsonBox">
