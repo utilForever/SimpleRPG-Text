@@ -18,6 +18,16 @@ Item::Item(std::string _id, JsonBox::Value& _v, EntityManager* _manager)
 	Load(_v, _manager);
 }
 
+std::string Item::GetName() const
+{
+	return name;
+}
+
+std::string Item::GetDescription() const
+{
+	return description;
+}
+
 void Item::Load(JsonBox::Value& v, EntityManager* manager)
 {
 	JsonBox::Object obj = v.getObject();
