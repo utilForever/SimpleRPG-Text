@@ -10,3 +10,8 @@ Entity::~Entity()
 {
 	
 }
+
+std::string Entity::GetID()
+{
+	return id;
+}

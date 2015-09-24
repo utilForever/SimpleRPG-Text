@@ -16,6 +16,8 @@ public:
 	Entity(std::string _id);
 	virtual ~Entity();
 
+	std::string GetID();
+
 	virtual void Load(JsonBox::Value& v, EntityManager* manager) = 0;
 };
 
