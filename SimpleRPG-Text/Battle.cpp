@@ -75,6 +75,7 @@ Battle::Battle(std::vector<Creature*>& _combatants)
 
 void Battle::Run()
 {
+	// TODO : check player != end
 	std::vector<Creature*>::iterator player;
 	std::vector<Creature*>::iterator end;
 	do {
@@ -83,7 +84,7 @@ void Battle::Run()
 		end = combatants.end();
 
 		NextTurn();
-	} while (player != end && combatants.size() > 1);
+	} while (combatants.size() > 1 && player != end);
 }
 
 void Battle::Kill(Creature* creature)
