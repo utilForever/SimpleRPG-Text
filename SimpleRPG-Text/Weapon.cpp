@@ -18,9 +18,14 @@ Weapon::Weapon(std::string _id, JsonBox::Value& _v, EntityManager* _manager)
 	Load(_v, _manager);
 }
 
+int Weapon::GetDamage()
+{
+	return damage;
+}
+
 void Weapon::Load(JsonBox::Value& v, EntityManager* manager)
 {
 	JsonBox::Object obj = v.getObject();
 
-	damage = obj["weapon"].getInteger();
+	damage = obj["damage"].getInteger();
 }
