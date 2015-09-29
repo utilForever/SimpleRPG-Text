@@ -15,8 +15,8 @@ Dialogue::Dialogue(JsonBox::Value& _v)
 {
 	JsonBox::Object obj = _v.getObject();
 
-	description = obj["Description"].getString();
-	for (auto& choice : obj["Choices"].getArray())
+	description = obj["description"].getString();
+	for (auto& choice : obj["choices"].getArray())
 		choices.push_back(choice.getString());
 }
 
@@ -35,14 +35,14 @@ int Dialogue::Activate()
 	std::cout << description << std::endl;
 
 	unsigned int number = 1;
-	for (auto& choice : choices)
+	for (auto choice : choices)
 		std::cout << number++ << ": " << choice << std::endl;
 
 	unsigned int userInput = 0;
 	while (true)
 	{
 		std::cin >> userInput;
-		if (userInput >= 1 && userInput <= choices.size())
+		if (userInput >= 0 && userInput <= choices.size())
 			return userInput;
 	}
 }
