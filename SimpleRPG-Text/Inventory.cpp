@@ -14,7 +14,7 @@
 template <typename T>
 void Inventory::Load(JsonBox::Value& v, EntityManager* manager)
 {
-	for (auto& item : v.getArray())
+	for (auto item : v.getArray())
 	{
 		std::string itemID = item.getArray()[0].getString();
 		int quantity = item.getArray()[1].getInteger();
@@ -27,7 +27,7 @@ JsonBox::Array Inventory::JSONArray()
 {
 	JsonBox::Array arr;
 
-	for (auto& item : items)
+	for (auto item : items)
 	{
 		if (item.first->GetID().substr(0, EntityToString<T>().size()) != EntityToString<T>())
 			continue;
@@ -51,9 +51,9 @@ Inventory::Inventory(JsonBox::Value& _v, EntityManager* _manager)
 {
 	JsonBox::Object obj = _v.getObject();
 
-	Load<Item>(obj["Items"], _manager);
-	Load<Weapon>(obj["Weapons"], _manager);
-	Load<Armor>(obj["Armor"], _manager);
+	Load<Item>(obj["items"], _manager);
+	Load<Weapon>(obj["weapons"], _manager);
+	Load<Armor>(obj["armor"], _manager);
 }
 
 void Inventory::Add(Item* itemToAdd, int count)
@@ -88,7 +88,7 @@ void Inventory::Remove(Item* itemToRemove, int count)
 
 int Inventory::Count(Item* itemToCount)
 {
-	for (auto& item : items)
+	for (auto item : items)
 	{
 		if (item.first->GetID() == itemToCount->GetID())
 			return item.second;
@@ -147,7 +147,7 @@ int Inventory::Print(bool label)
 {
 	unsigned int number = 1;
 
-	for (auto& item : items)
+	for (auto item : items)
 	{
 		if (item.first->GetID().substr(0, EntityToString<T>().size()) != EntityToString<T>())
 			continue;
@@ -170,7 +170,7 @@ void Inventory::Merge(Inventory* inventory)
 	if (this == inventory)
 		return;
 
-	for (auto& item : inventory->items)
+	for (auto item : inventory->items)
 		Add(item.first, item.second);
 }
 
@@ -178,9 +178,9 @@ JsonBox::Object Inventory::GetJSON()
 {
 	JsonBox::Object obj;
 
-	obj["Items"] = JsonBox::Value(JSONArray<Item>());
-	obj["Weapons"] = JsonBox::Value(JSONArray<Weapon>());
-	obj["Armor"] = JsonBox::Value(JSONArray<Armor>());
+	obj["items"] = JsonBox::Value(JSONArray<Item>());
+	obj["weapons"] = JsonBox::Value(JSONArray<Weapon>());
+	obj["armor"] = JsonBox::Value(JSONArray<Armor>());
 
 	return obj;
 }
