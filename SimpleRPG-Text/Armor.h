@@ -18,6 +18,8 @@ public:
 	Armor(std::string _id, std::string _name, std::string _description, int _defense);
 	Armor(std::string _id, JsonBox::Value& _v, EntityManager* _manager);
 
+	int GetDefense();
+
 	void Load(JsonBox::Value& v, EntityManager* manager) override;
 };
 

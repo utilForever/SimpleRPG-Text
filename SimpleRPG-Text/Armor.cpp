@@ -18,6 +18,11 @@ Armor::Armor(std::string _id, JsonBox::Value& _v, EntityManager* _manager)
 	Load(_v, _manager);
 }
 
+int Armor::GetDefense()
+{
+	return defense;
+}
+
 void Armor::Load(JsonBox::Value& v, EntityManager* manager)
 {
 	JsonBox::Object obj = v.getObject();
