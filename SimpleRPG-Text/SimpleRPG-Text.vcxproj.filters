@@ -33,6 +33,11 @@
     <ClCompile Include="Weapon.cpp" />
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Dialogue.cpp" />
+    <ClCompile Include="Area.cpp" />
+    <ClCompile Include="Door.cpp" />
+    <ClCompile Include="Creature.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Battle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="JsonBox\Array.h">
@@ -79,6 +84,11 @@
     <ClInclude Include="Weapon.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="Dialogue.h" />
+    <ClInclude Include="Area.h" />
+    <ClInclude Include="Door.h" />
+    <ClInclude Include="Creature.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Battle.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="JsonBox">

@@ -19,8 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Area.cpp" />
     <ClCompile Include="Armor.cpp" />
+    <ClCompile Include="Battle.cpp" />
+    <ClCompile Include="Creature.cpp" />
     <ClCompile Include="Dialogue.cpp" />
+    <ClCompile Include="Door.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="EntityManager.cpp" />
     <ClCompile Include="Inventory.cpp" />
@@ -34,11 +38,16 @@
     <ClCompile Include="JsonBox\SolidusEscaper.cpp" />
     <ClCompile Include="JsonBox\Value.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Area.h" />
     <ClInclude Include="Armor.h" />
+    <ClInclude Include="Battle.h" />
+    <ClInclude Include="Creature.h" />
     <ClInclude Include="Dialogue.h" />
+    <ClInclude Include="Door.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="EntityManager.h" />
     <ClInclude Include="Inventory.h" />
@@ -56,6 +65,7 @@
     <ClInclude Include="JsonBox\OutputFilter.h" />
     <ClInclude Include="JsonBox\SolidusEscaper.h" />
     <ClInclude Include="JsonBox\Value.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <ItemGroup>
@@ -155,11 +165,15 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
