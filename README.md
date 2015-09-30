@@ -6,6 +6,22 @@ Text-based Simple RPG using C++ based on [Pipe Penguin's C++ RPG Tutorial](https
 
 ![CodeMap](https://github.com/utilForever/SimpleRPG-Text/blob/master/CodeMap.png)
 
+## Characteristics
+
+- <B>Application of Modern C++</B>. 
+
+- <B>Data manipulation through JSON</B>.
+
+- <B>Turn-based battle system</B>.
+
+- <B>Save / Load support</B>.
+
+## Supported compilers
+
+- Microsoft Visual C++ 14.0 (Microsoft Visual Studio 2015)
+- GCC (TBD)
+- Clang (TBD)
+
 ## JsonBox
 
 This project uses JsonBox for JSON manipulation, namely the file `SimpleRPG-Text/JsonBox.h` and the files in the folder `SimpleRPG-Text/JsonBox/`.
