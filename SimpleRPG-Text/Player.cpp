@@ -37,7 +37,7 @@ unsigned int Player::GetLevel()
 	return level;
 }
 
-std::unordered_set<std::string> Player::GetVisitedArea()
+std::unordered_set<std::string>& Player::GetVisitedArea()
 {
 	return visitedAreas;
 }

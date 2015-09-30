@@ -24,7 +24,7 @@ public:
 
 	std::string GetClassName();
 	unsigned int GetLevel();
-	std::unordered_set<std::string> GetVisitedArea();
+	std::unordered_set<std::string>& GetVisitedArea();
 
 	unsigned int GetXPToLevelUp(unsigned int level);
 	bool LevelUp();
