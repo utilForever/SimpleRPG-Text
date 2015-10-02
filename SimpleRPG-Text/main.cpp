@@ -23,6 +23,9 @@
 #include "Battle.h"
 #include "EntityManager.h"
 
+
+#define MAX_PLAYER_NAME_SIZE 14
+
 Player StartGame();
 
 void DialogueMenu(Player& player);
@@ -126,8 +129,11 @@ int main(int argc, char* argv[])
 Player StartGame()
 {
 	std::cout << "What's your name?" << std::endl;
-	std::string name;
-	std::cin >> name;
+	
+    char tmp_name[MAX_PLAYER_NAME_SIZE];
+    std::fgets(tmp_name, MAX_PLAYER_NAME_SIZE, stdin);
+
+    std::string name(tmp_name);
 
 	std::ifstream f((name + ".json").c_str());
 	if (f.good())

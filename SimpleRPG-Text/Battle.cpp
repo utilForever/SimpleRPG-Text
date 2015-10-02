@@ -149,6 +149,10 @@ void Battle::NextTurn()
 	while (!events.empty())
 	{
 		BattleEvent event = events.front();
+
+        Creature *pSourceObject = event.GetSource();
+        Creature *pTargetObject = event.GetTarget();
+
 		switch (event.GetType())
 		{
 		case BattleEventType::ATTACK:
@@ -156,17 +160,19 @@ void Battle::NextTurn()
 			auto a = combatants.begin();
 			auto b = combatants.end();
 
-			if (std::find(a, b, event.GetSource()) == b || std::find(a, b, event.GetTarget()) == b)
+			if (std::find(a, b, pSourceObject) == b || std::find(a, b, pTargetObject) == b)
 				break;
+            
+			std::cout << pSourceObject->GetName() << " attacks " << pTargetObject->GetName() << " for "	<< event.Run() << " damage!" << std::endl;
+            std::cout << pTargetObject->GetName() << " : " << pTargetObject->GetHP() << "Hp Left" << std::endl;
 
-			std::cout << event.GetSource()->GetName() << " attacks " << event.GetTarget()->GetName() << " for "	<< event.Run() << " damage!" << std::endl;
-			if (event.GetTarget()->GetHP() <= 0)
-				Kill(event.GetTarget());
+			if (pTargetObject->GetHP() <= 0)
+				Kill(pTargetObject);
 
 			break;
 		}
 		case BattleEventType::DEFEND:
-			std::cout << event.GetSource()->GetName() << " defends!\n";
+			std::cout << pSourceObject->GetName() << " defends!\n";
 			break;
 		default:
 			break;
