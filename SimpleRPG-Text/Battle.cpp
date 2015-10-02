@@ -150,8 +150,8 @@ void Battle::NextTurn()
 	{
 		BattleEvent event = events.front();
 
-        Creature *pSourceObject = event.GetSource();
-        Creature *pTargetObject = event.GetTarget();
+        Creature* pSourceObject = event.GetSource();
+        Creature* pTargetObject = event.GetTarget();
 
 		switch (event.GetType())
 		{
